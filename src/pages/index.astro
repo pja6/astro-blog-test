@@ -1,44 +1,11 @@
 ---
-const clientName = 'Polytechnic Pals'
-const currentYear = new Date().getFullYear();
-// const user = {
-//     name : 'Victor E. Eagle',
-//     age : 100,
-// }
-// console.log(user.name)
-// console.log(user.age)
-const emojiSet = ['🍔', '🌭', '🍟', '🍕']
-import data from "../data/theData.json"
+import BaseLayout from "../layouts/BaseLayout.astro"
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{clientName}</title>
-	</head>
-	<body id={clientName}>
+<BaseLayout>
 
-		<a href="/">Home</a>
-<a href="/about/">About</a>
+<h1>homepage</h1>
 
-		<h1>{clientName}</h1>
-		<p>Welcome, EWU is now called {clientName}!</p>
-		<!-- <p>Our mascot is {user.name} and he is {user.age} years old.</p>
-		<p> {user.name} loves food. His favorites are: </p>
-		 -->
-		 <p>Our mascot is {data.name} and he is {data.age} years old.</p>
-		 <p> {data.name} loves food. His favorites are: </p>
-		
-		 <ul>
-			{emojiSet.map(emoji => (
-				<li>{emoji}</li>
-			))}
-		</ul>
-		<footer>
-			<p>&copy; {currentYear} {clientName}</p>
-		</footer>
-	</body>
-</html>
+
+</BaseLayout>
