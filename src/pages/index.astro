@@ -1,13 +1,14 @@
 ---
 const clientName = 'Polytechnic Pals'
 const currentYear = new Date().getFullYear();
-const user = {
-    name : 'Victor E. Eagle',
-    age : 100,
-}
-console.log(user.name)
-console.log(user.age)
+// const user = {
+//     name : 'Victor E. Eagle',
+//     age : 100,
+// }
+// console.log(user.name)
+// console.log(user.age)
 const emojiSet = ['🍔', '🌭', '🍟', '🍕']
+import data from "../data/theData.json"
 ---
 
 <html lang="en">
@@ -25,9 +26,13 @@ const emojiSet = ['🍔', '🌭', '🍟', '🍕']
 
 		<h1>{clientName}</h1>
 		<p>Welcome, EWU is now called {clientName}!</p>
-		<p>Our mascot is {user.name} and he is {user.age} years old.</p>
+		<!-- <p>Our mascot is {user.name} and he is {user.age} years old.</p>
 		<p> {user.name} loves food. His favorites are: </p>
-		<ul>
+		 -->
+		 <p>Our mascot is {data.name} and he is {data.age} years old.</p>
+		 <p> {data.name} loves food. His favorites are: </p>
+		
+		 <ul>
 			{emojiSet.map(emoji => (
 				<li>{emoji}</li>
 			))}
